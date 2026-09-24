@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalvin — Frontend + Backend. Built Together.</title>
+<meta name="description" content="Kalvin is a two-person web development team. Karl builds the frontend experience, Alvin builds the backend systems, together they ship complete web products.">
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#top" class="logo">Kalvin</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#team">Team</a>
+      <a href="#services">Services</a>
+      <a href="#stack">Stack</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Contact</a>
+      <a href="#contact" class="btn btn-primary">Start a Project</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#work">Work</a>
+    <a href="#team">Team</a>
+    <a href="#services">Services</a>
+    <a href="#stack">Stack</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary">Start a Project</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="reveal">
+      <span class="hero-eyebrow"><span class="dot"></span>Two developers. Not an agency.</span>
+      <h1>Kalvin</h1>
+      <p class="hero-sub">Frontend + Backend. <b>Built Together.</b></p>
+      <span class="hero-name-mark" aria-hidden="true"><span></span><span></span></span>
+      <p class="desc">Karl builds the interface. Alvin builds what runs behind it — the APIs, databases, and infrastructure. One team, no hand-off gap: front to back.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start a Project<span class="btn-arrow" aria-hidden="true">→</span></a>
+        <a href="#work" class="btn btn-ghost">View Our Work</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <span class="hero-visual-caption">// frontend → api → backend</span>
+      <svg viewBox="0 0 440 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- connecting paths -->
+        <path d="M 40 210 C 140 210, 140 90, 240 90 S 340 90, 400 210" fill="none" stroke="#232326" stroke-width="1.5"/>
+        <path d="M 40 210 C 140 210, 140 330, 240 330 S 340 330, 400 210" fill="none" stroke="#232326" stroke-width="1.5"/>
+        <line x1="240" y1="90" x2="240" y2="330" stroke="#232326" stroke-width="1.5" stroke-dasharray="3 5"/>
+
+        <!-- nodes -->
+        <circle cx="40" cy="210" r="7" fill="#0A0A0B" stroke="#5EEAD4" stroke-width="2"/>
+        <circle cx="240" cy="90" r="6" fill="#0A0A0B" stroke="#F5F5F4" stroke-width="1.5"/>
+        <circle cx="240" cy="330" r="6" fill="#0A0A0B" stroke="#F5F5F4" stroke-width="1.5"/>
+        <circle cx="400" cy="210" r="7" fill="#0A0A0B" stroke="#4C7DFF" stroke-width="2"/>
+
+        <text x="16" y="240" class="node-label">FRONTEND</text>
+        <text x="205" y="72" class="node-label">API</text>
+        <text x="196" y="358" class="node-label">AUTH</text>
+        <text x="360" y="240" class="node-label">BACKEND</text>
+
+        <!-- animated pulses -->
+        <circle class="pulse-dot" r="3.5" fill="#5EEAD4"/>
+        <circle class="pulse-dot-2" r="3.5" fill="#4C7DFF"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section" id="what-we-do">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">What we do</span>
+      <h2>Two disciplines, one product.</h2>
+      <p>Most builds break down at the seam between design and engineering. We close that gap by owning both sides ourselves.</p>
+    </div>
+    <div class="do-grid">
+      <div class="do-card k reveal">
+        <span class="mono">Karl — Frontend</span>
+        <h3>Interfaces worth using</h3>
+        <p>Responsive sites, landing pages, and UI builds focused on clarity and conversion — including funnels and GoHighLevel work.</p>
+      </div>
+      <div class="do-card a reveal">
+        <span class="mono">Alvin — Backend</span>
+        <h3>Systems built to hold up</h3>
+        <p>APIs, databases, and infrastructure on the MERN stack and Python/FastAPI — with auth, testing, and performance handled properly.</p>
+      </div>
+      <div class="do-card reveal">
+        <span class="mono">Together</span>
+        <h3>One team, one build</h3>
+        <p>From a single page to a full application, one team owns the whole thing — not just their half of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">Featured projects</span>
+      <h2>Selected builds &amp; experiments.</h2>
+      <p>We're a new team — this space will hold real client work as it ships. For now, these are sample slots so you can see how a build is structured and who owns what. Each card is tagged Frontend, Backend, or Full Build.</p>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+    <p class="projects-note">// placeholder slots — real builds go here as they ship, each tagged by who built what.</p>
+  </div>
+</section>
+
+<!-- TEAM / THE HANDOFF -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">Kalvin</span>
+      <h2>One team, two specialties.</h2>
+      <p>No account managers, no hand-offs between agencies. Just the two of us, across the full stack.</p>
+    </div>
+
+    <div class="team-split reveal">
+      <div class="team-panel karl">
+        <span class="team-role">Frontend Developer</span>
+        <h3 class="team-name">Karl</h3>
+        <p class="team-title">Interfaces, layouts, and pages built to convert</p>
+        <div class="team-tags">
+          <span class="team-tag">UI Implementation</span>
+          <span class="team-tag">Responsive Websites</span>
+          <span class="team-tag">Landing Pages</span>
+          <span class="team-tag">GoHighLevel</span>
+          <span class="team-tag">Funnels</span>
+        </div>
+      </div>
+      <div class="team-seam">
+        <span class="handoff-label">The Handoff</span>
+      </div>
+      <div class="team-panel alvin">
+        <span class="team-role">Backend Developer</span>
+        <h3 class="team-name">Alvin</h3>
+        <p class="team-title">APIs, databases, and the logic that runs them</p>
+        <div class="team-tags">
+          <span class="team-tag">MERN Stack</span>
+          <span class="team-tag">Node.js / Express</span>
+          <span class="team-tag">Python / FastAPI</span>
+          <span class="team-tag">MongoDB · PostgreSQL</span>
+          <span class="team-tag">JWT / OAuth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">Services</span>
+      <h2>What you can hire us for.</h2>
+      <p>Delivered by whoever owns that layer — Karl, Alvin, or both of us together.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-head"><h3>Responsive Websites</h3><span class="service-owner k">Karl</span></div>
+        <p>Marketing sites and business websites that hold up across every screen size.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-head"><h3>Landing Pages &amp; Funnels</h3><span class="service-owner k">Karl</span></div>
+        <p>Conversion-focused pages built for paid traffic, launches, and GoHighLevel workflows.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-head"><h3>REST APIs</h3><span class="service-owner a">Alvin</span></div>
+        <p>Clean, documented APIs built with Node/Express or FastAPI, ready to power any frontend.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-head"><h3>Databases &amp; Auth</h3><span class="service-owner a">Alvin</span></div>
+        <p>MongoDB and PostgreSQL data modeling, plus JWT/OAuth authentication done properly.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-head"><h3>Web Applications</h3><span class="service-owner">Both</span></div>
+        <p>End-to-end builds — UI, API, database, and deployment — as a single connected product.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-head"><h3>API Integrations</h3><span class="service-owner a">Alvin</span></div>
+        <p>Connecting third-party services and internal tools through reliable, tested integrations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="section" id="stack">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">Tech stack</span>
+      <h2>Tools we build with.</h2>
+      <p>Nothing exotic — a proven, production-ready stack for the frontend, the backend, and everything that keeps it running.</p>
+    </div>
+    <div class="stack-groups">
+      <div class="stack-group reveal">
+        <h4>Frontend</h4>
+        <div class="stack-tags">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">HTML / CSS</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">GoHighLevel</span>
+          <span class="stack-tag">Responsive Design</span>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <h4>Backend</h4>
+        <div class="stack-tags">
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">Express.js</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">REST APIs</span>
+          <span class="stack-tag">JWT / OAuth</span>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <h4>Data &amp; Infra</h4>
+        <div class="stack-tags">
+          <span class="stack-tag">MongoDB</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">SQL</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">Docker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">Our process</span>
+      <h2>How a project moves from idea to live.</h2>
+      <p>Four stages, no unnecessary steps in between.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-step reveal">
+        <span class="process-num">01</span>
+        <h3>Discover</h3>
+        <p>We learn what you're building, who it's for, and what "done" looks like.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">02</span>
+        <h3>Design</h3>
+        <p>Karl maps the interface and user flow before any code is written.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">03</span>
+        <h3>Build</h3>
+        <p>Frontend and backend are built in parallel, integrated continuously.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">04</span>
+        <h3>Ship</h3>
+        <p>We test, deploy, and hand over a product that's ready to run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE CAN BUILD -->
+<section class="section" id="build">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">What we can build</span>
+      <h2>Not just pages. Full products.</h2>
+    </div>
+    <div class="build-grid">
+      <div class="build-card reveal">
+        <h3>Landing pages &amp; funnels</h3>
+        <p>High-conversion pages for launches, offers, and paid campaigns.</p>
+      </div>
+      <div class="build-card reveal">
+        <h3>Business websites</h3>
+        <p>Multi-page sites that represent a brand clearly and load fast.</p>
+      </div>
+      <div class="build-card reveal">
+        <h3>Web applications</h3>
+        <p>Full products with user accounts, logic, and persistent data.</p>
+      </div>
+      <div class="build-card reveal">
+        <h3>Internal tools &amp; dashboards</h3>
+        <p>Interfaces for managing data your team already relies on.</p>
+      </div>
+      <div class="build-card reveal">
+        <h3>APIs &amp; integrations</h3>
+        <p>Backend services that connect your tools and your data together.</p>
+      </div>
+      <div class="build-card reveal">
+        <h3>MVPs</h3>
+        <p>A working first version of a product, built to validate the idea fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">FAQ</span>
+      <h2>Questions we get asked.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Are you an agency or two freelancers?
+          <span class="icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We're a two-person team — Karl handles frontend, Alvin handles backend. You work directly with whoever owns the part of the project you're asking about, no account managers in between.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can you handle a project end-to-end?
+          <span class="icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Between the two of us we cover interface design, frontend build, backend logic, databases, and deployment — you can bring us a full product idea, not just one piece of it.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you only take full-stack projects?
+          <span class="icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No. If you only need frontend work, Karl can take that on alone. If you only need backend or API work, Alvin can do the same.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you work with GoHighLevel?
+          <span class="icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — Karl builds landing pages and funnels directly inside GoHighLevel, alongside standard custom-coded sites.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How do we start a project together?
+          <span class="icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Send us a message through the contact form below with a short description of what you're building. We'll reply with questions and next steps.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="reveal">Have a project in mind? Let's build it together.</h2>
+    <p class="reveal">Tell us what you're trying to build — we'll tell you how Karl and Alvin would approach it, frontend and backend.</p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn btn-primary">Start a Project</a>
+      <a href="#work" class="btn btn-ghost">View Our Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="mono">Contact</span>
+      <h2>Tell us about your project.</h2>
+      <p>Landing page, full application, or something in between — describe it below and we'll follow up.</p>
+      <div class="contact-detail">
+        <span class="mono">Email</span>
+        <a href="mailto:hello@karlandalvin.dev">hello@karlandalvin.dev</a>
+      </div>
+      <div class="contact-detail">
+        <span class="mono">Response time</span>
+        <span>Usually within 1–2 business days</span>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required
+            aria-required="true">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            inputmode="email"
+            required
+            aria-required="true">
+        </div>
+      </div>
+      <div class="field">
+        <label for="projectType">Project type</label>
+        <select
+          id="projectType"
+          name="projectType"
+          autocomplete="off"
+          required
+          aria-required="true">
+          <option value="" disabled selected>Select a project type</option>
+          <option value="Website / Frontend">Website / Frontend</option>
+          <option value="Backend / API">Backend / API</option>
+          <option value="Full Build">Full Build</option>
+          <option value="GoHighLevel / Funnel">GoHighLevel / Funnel</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Project details</label>
+        <textarea
+          id="message"
+          name="message"
+          autocomplete="off"
+          required
+          aria-required="true"
+          placeholder="What are you building, and what do you need help with?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="contactSubmit">Send Message</button>
+      <p class="form-note">This connects to our API, but email delivery isn't live yet — submissions are logged on our end and we'll follow up manually.</p>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">Kalvin</a>
+        <p>Frontend + backend, built by a two-person team. No agency layer in between.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Site</h5>
+          <a href="#work">Work</a>
+          <a href="#team">Team</a>
+          <a href="#services">Services</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:hello@karlandalvin.dev">Email</a>
+          <a href="#contact">Start a project</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kalvin. All rights reserved.</p>
+      <p>Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
