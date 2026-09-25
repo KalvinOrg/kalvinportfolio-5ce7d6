@@ -399,7 +399,18 @@
       </div>
     </div>
 
-    <form class="contact-form reveal" id="contactForm" novalidate>
+    <form
+      class="contact-form reveal"
+      id="contactForm"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp-field" aria-hidden="true">
+        <label>Leave this field empty: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
       <div class="form-row">
         <div class="field">
           <label for="name">Name</label>
@@ -450,7 +461,7 @@
           placeholder="What are you building, and what do you need help with?"></textarea>
       </div>
       <button type="submit" class="btn btn-primary" id="contactSubmit">Send Message</button>
-      <p class="form-note">This connects to our API, but email delivery isn't live yet — submissions are logged on our end and we'll follow up manually.</p>
+      <p class="form-note">Submissions go straight to our inbox — we'll follow up within 1–2 business days.</p>
       <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
     </form>
   </div>
