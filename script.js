@@ -162,15 +162,9 @@
   });
 
   /* ---- Contact form ----
-     Connected to the Karl + Alvin backend API (see /backend).
-     The backend is still in dev mode — no email provider is configured
-     yet, so a successful response means the message was received and
-     logged server-side, not that an email went out. We only ever show
-     what the API actually says. ---- */
-
-  // Single place to change when the site goes live — swap this for the
-  // deployed API URL (e.g. https://api.karlandalvin.dev) at that point.
-  var API_BASE_URL = 'http://localhost:4000';
+     Submits to Netlify Forms (see the data-netlify attribute on the
+     <form> in index.html) via AJAX so we can show inline status
+     messages instead of a full page reload. ---- */
 
   var form = document.getElementById('contactForm');
   var status = document.getElementById('formStatus');
@@ -206,51 +200,26 @@
       return;
     }
 
-    var payload = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      projectType: form.projectType.value,
-      message: form.message.value.trim()
-    };
+    var body = new URLSearchParams(new FormData(form)).toString();
 
     setSubmitting(true);
 
-    fetch(API_BASE_URL + '/api/contact', {
+    fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
     })
       .then(function(res){
-        return res.json()
-          .catch(function(){
-            // Response wasn't valid JSON (e.g. the API is down behind a
-            // proxy that returned an HTML error page).
-            return null;
-          })
-          .then(function(data){ return { ok: res.ok, data: data }; });
-      })
-      .then(function(result){
-        var data = result.data;
-
-        if(!result.ok){
-          var errorMessage =
-            (data && data.errors && data.errors[0] && data.errors[0].message) ||
-            (data && data.message) ||
-            'Something went wrong sending that. Please try again or email us directly.';
-          setStatus(errorMessage, 'is-error');
-          return;
+        if(!res.ok){
+          throw new Error('Form submission failed with status ' + res.status);
         }
 
-        // Success — only reached once the API has confirmed it.
-        var successMessage =
-          (data && data.message) ||
-          'Thanks — your message was received.';
-        setStatus(successMessage, 'is-success');
+        setStatus('Thanks — your message was received. We\'ll follow up within 1–2 business days.', 'is-success');
         form.reset();
       })
       .catch(function(){
-        // Network failure, CORS block, or the API is simply unreachable.
-        setStatus('We couldn\'t reach the server. Check your connection and try again, or email us directly at einjhelaquino02@gmail.com.', 'is-error');
+        // Network failure or the form wasn't registered with Netlify.
+        setStatus('We couldn\'t send that. Please try again or email us directly at einjhelaquino02@gmail.com.', 'is-error');
       })
       .finally(function(){
         setSubmitting(false);
