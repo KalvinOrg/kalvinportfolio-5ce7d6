@@ -250,7 +250,7 @@
       })
       .catch(function(){
         // Network failure, CORS block, or the API is simply unreachable.
-        setStatus('We couldn\'t reach the server. Check your connection and try again, or email us directly at hello@karlandalvin.dev.', 'is-error');
+        setStatus('We couldn\'t reach the server. Check your connection and try again, or email us directly at einjhelaquino02@gmail.com.', 'is-error');
       })
       .finally(function(){
         setSubmitting(false);
